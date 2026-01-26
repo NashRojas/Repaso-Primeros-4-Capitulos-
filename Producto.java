@@ -46,11 +46,11 @@ public class Producto {
     public String getNombre(){
         return nombre;
     }
-
+    // validacion de nombre y capitalizacion 
     public void setNombre(String nombre){
-        if (nombre != null && !nombre.equals("")) {
-            this.nombre = nombre;
-        }
+        if (nombre != null && !nombre.trim().equals("")) {
+        this.nombre = nombre.substring(0, 1).toUpperCase() + nombre.substring(1);
+    }
     }
 
     public double getPrecio() {
