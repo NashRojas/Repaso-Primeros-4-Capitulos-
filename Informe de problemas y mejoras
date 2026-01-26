@@ -1,0 +1,16 @@
+--------------Problemas Conocidos------------
+El sistema no guarda los datos al cerrar el programa
+
+El inventario tiene un limite fijo de 100 productos
+
+No se manejan errores de entrada avanzados
+
+---------------------Mejoras Futuras-------------------
+
+Guardar y cargar inventario desde archivos
+
+Implementar busquedas mas avanzadas
+
+Agregar interfaz grafica
+
+Manejo de usuarios y roles del negocio
