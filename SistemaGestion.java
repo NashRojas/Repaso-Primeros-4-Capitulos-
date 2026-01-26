@@ -131,7 +131,16 @@ public class SistemaGestion {
                 case 8:
                     System.out.print("Ingrese el porcentaje de descuento: ");
                     double descuento = scanner.nextDouble();
+                    //confirmacion para descuenos grandes (+50%)
+                    if (descuento > 50) {
+                        System.out.print("Descuento alto. Confirmar? (s/n): ");
+                        String conf = scanner.next();
 
+                    if (!conf.equalsIgnoreCase("s")) {
+                        System.out.println("Operacion cancelada");
+                    break;
+                        }
+                    }
                     inventario.aplicarDescuentoGeneral(descuento);
                     System.out.println("Descuento aplicado a todos los productos");
                     break;
