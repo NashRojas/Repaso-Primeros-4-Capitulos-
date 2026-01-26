@@ -82,12 +82,18 @@ public class SistemaGestion {
                 case 6:
                     System.out.print("Ingrese el codigo del producto a eliminar: ");
                     codigo = scanner.nextLine();
-
+                    // Confirmacion antes de eliminar
+                    System.out.print("Esta seguro que desea eliminar? (s/n): ");
+                    String confirmacion = scanner.nextLine();
+                    if (confirmacion.equalsIgnoreCase("s")) {
                     if (inventario.eliminarProducto(codigo)) {
                         System.out.println("Producto eliminado correctamente");
                     } else {
-                        System.out.println("No se encontro el producto");
-                    }
+                            System.out.println("No se encontro el producto");
+                        }
+                    } else {
+                            System.out.println("Operacion cancelada");
+                        }
                     break;
 
                 case 7:
