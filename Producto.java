@@ -47,7 +47,7 @@ public class Producto {
         return nombre;
     }
 
-    public voidd setNombre(String nombre){
+    public void setNombre(String nombre){
         if (nombre != null && !nombre.equals("")) {
             this.nombre = nombre;
         }

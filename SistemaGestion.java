@@ -138,7 +138,7 @@ public class SistemaGestion {
                     break;
 
                 case 10:
-                    double total = inventario.calcularValorTotalInventario();
+                    double total = inventario.calcularValorTotal();
                     System.out.println("Valor total del inventario: $" + total);
                     break;
 

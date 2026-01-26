@@ -8,7 +8,7 @@ public class Inventario {
         totalProductos = 0;
     }
 
-    public boolean agregarProducto(producto p) {
+    public boolean agregarProducto(Producto p) {
         if (p == null) {
             return false;
         }
@@ -17,8 +17,8 @@ public class Inventario {
             return false;
         }
 
-        for (int i - 0; i < totalProductos; i++) {
-            if (producto[i].getCodigo().equals(p.getCodigo())) {
+        for (int i = 0; i < totalProductos; i++) {
+            if (productos[i].getCodigo().equals(p.getCodigo())) {
                 return false;
             }
         }
@@ -30,8 +30,8 @@ public class Inventario {
 
     // busqueda de producto por codigo
     public Producto buscarProducto(String codigo) {
-        for (int i = 0; i < totalProductos: i++) {
-            if (producto[i].getCodigo().equals(codigo)) {
+        for (int i = 0; i < totalProductos; i++) {
+            if (productos[i].getCodigo().equals(codigo)) {
                 return productos[i];
             }
         }
