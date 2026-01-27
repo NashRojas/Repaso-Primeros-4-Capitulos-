@@ -6,7 +6,9 @@
 - **Fecha de entrega:** [27/01/2026]
 
 ## Descripcion 
-Este proyecto consiste en un Sistema de Gestion de Productos desarrollado en Java, que permite administrar un inventario de manera sencilla y organizada. El sistema incluye funcionalidades para agregar, buscar, eliminar y listar productos, asi como calcular estadisticas del inventario. Ademas, se implementaron validaciones basicas.
+Este proyecto consiste en un Sistema de Gestion de Productos desarrollado en Java, que permite administrar un inventario de manera sencilla y organizada. 
+El sistema incluye funcionalidades para agregar, buscar, eliminar y listar productos, asi como calcular estadisticas del inventario. 
+Ademas, se implementaron validaciones basicas.
 
 ## funcionalidades Implementadas
 - [x] Clase Producto
