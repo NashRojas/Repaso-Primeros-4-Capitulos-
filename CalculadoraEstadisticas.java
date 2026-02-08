@@ -1,7 +1,7 @@
 public class CalculadoraEstadisticas {
 
     // Calcular precio promedio
-    public static double calcularPromedioPrecio(Producto[] productos, int cantidad) {
+    public static double calcularPromedioPrecio(Productos[] productos, int cantidad) {
         double suma = 0;
         int contador = 0;
 
@@ -20,12 +20,12 @@ public class CalculadoraEstadisticas {
     }
 
     // Encontrar producto mas caro
-    public static Producto encontrarProductoMasCaro(Producto[] productos, int cantidad) {
+    public static Productos encontrarProductoMasCaro(Productos[] productos, int cantidad) {
         if (cantidad == 0) {
             return null;
         }
 
-        Producto masCaro = productos[0];
+        Productos masCaro = productos[0];
 
         for (int i = 1; i < cantidad; i++) {
             if (productos[i].getPrecio() > masCaro.getPrecio()) {
@@ -37,12 +37,12 @@ public class CalculadoraEstadisticas {
     }
 
     // Encontrar producto mas barato
-    public static Producto encontrarProductoMasBarato(Producto[] productos, int cantidad) {
+    public static Productos encontrarProductoMasBarato(Productos[] productos, int cantidad) {
         if (cantidad == 0) {
             return null;
         }
 
-        Producto masBarato = productos[0];
+        Productos masBarato = productos[0];
 
         for (int i = 1; i < cantidad; i++) {
             if (productos[i].getPrecio() < masBarato.getPrecio()) {
@@ -54,7 +54,7 @@ public class CalculadoraEstadisticas {
     }
 
     // Contar productos por rango de precio
-    public static int contarProductosPorRangoPrecio(Producto[] productos, int cantidad, double min, double max) {
+    public static int contarProductosPorRangoPrecio(Productos[] productos, int cantidad, double min, double max) {
         int contador = 0;
 
         for (int i = 0; i < cantidad; i++) {
@@ -68,7 +68,7 @@ public class CalculadoraEstadisticas {
     }
 
     // Calcular valor promedio del inventario
-    public static double calcularValorPromedioInventario(Producto[] productos, int cantidad) {
+    public static double calcularValorPromedioInventario(Productos[] productos, int cantidad) {
         if (cantidad == 0) {
             return 0;
         }
@@ -83,7 +83,7 @@ public class CalculadoraEstadisticas {
     }
 
     // Mostrar estadisticas completas
-    public static void mostrarEstadisticas(Producto[] productos, int cantidad) {
+    public static void mostrarEstadisticas(Productos[] productos, int cantidad) {
         System.out.println("========================================");
         System.out.println("       ESTADISTICAS DEL INVENTARIO");
         System.out.println("========================================");
@@ -91,12 +91,12 @@ public class CalculadoraEstadisticas {
         System.out.println("Total de productos: " + cantidad);
         System.out.println("Precio promedio: $" + calcularPromedioPrecio(productos, cantidad));
 
-        Producto masCaro = encontrarProductoMasCaro(productos, cantidad);
+        Productos masCaro = encontrarProductoMasCaro(productos, cantidad);
         if (masCaro != null) {
             System.out.println("Producto mas caro: " + masCaro.getNombre() + " ($" + masCaro.getPrecio() + ")");
         }
 
-        Producto masBarato = encontrarProductoMasBarato(productos, cantidad);
+        Productos masBarato = encontrarProductoMasBarato(productos, cantidad);
         if (masBarato != null) {
             System.out.println("Producto mas barato: " + masBarato.getNombre() + " ($" + masBarato.getPrecio() + ")");
         }

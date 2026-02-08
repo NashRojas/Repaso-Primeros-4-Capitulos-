@@ -44,7 +44,7 @@ public class SistemaGestion {
                     System.out.print("Ingrese la cantidad: ");
                     int cantidad = scanner.nextInt();
 
-                    Producto nuevo = new Producto(codigo, nombre, precio, cantidad);
+                    Productos nuevo = new Productos(codigo, nombre, precio, cantidad);
 
                     if (inventario.agregarProducto(nuevo)) {
                         System.out.println("Producto agregado exitosamente");
@@ -58,7 +58,7 @@ public class SistemaGestion {
                     System.out.print("Ingrese el codigo a buscar: ");
                     codigo = scanner.nextLine();
 
-                    Producto encontrado = inventario.buscarProducto(codigo);
+                    Productos encontrado = inventario.buscarProducto(codigo);
 
                     if (encontrado != null) {
                         encontrado.mostrarInfo();
@@ -100,7 +100,7 @@ public class SistemaGestion {
                     System.out.print("Ingrese el codigo del producto: ");
                     codigo = scanner.nextLine();
 
-                    Producto prod = inventario.buscarProducto(codigo);
+                    Productos prod = inventario.buscarProducto(codigo);
 
                     if (prod != null) {
                         System.out.println("1. Agregar stock");

@@ -1,4 +1,4 @@
-public class Producto {
+public class Productos {
     
     private String codigo;
     private String nombre;
@@ -6,7 +6,7 @@ public class Producto {
     private int cantidad;
 
     // Constructor Vacio
-    public Producto(){
+    public Productos(){
         this.codigo = "";
         this.nombre = "";
         this.precio = 0.0;
@@ -16,7 +16,7 @@ public class Producto {
     }
 
     // Constructor con parametros
-    public Producto(String codigo, String nombre, double precio, int cantidad) {
+    public Productos(String codigo, String nombre, double precio, int cantidad) {
         this.codigo = codigo;
         this.nombre = nombre;
 

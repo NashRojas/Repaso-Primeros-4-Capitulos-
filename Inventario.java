@@ -1,14 +1,14 @@
 public class Inventario {
 
-    private Producto[] productos;
+    private Productos[] productos;
     private int totalProductos;
 
     public Inventario(){
-        productos = new Producto[100];
+        productos = new Productos[100];
         totalProductos = 0;
     }
 
-    public boolean agregarProducto(Producto p) {
+    public boolean agregarProducto(Productos p) {
         if (p == null) {
             return false;
         }
@@ -29,7 +29,7 @@ public class Inventario {
     }
 
     // busqueda de producto por codigo
-    public Producto buscarProducto(String codigo) {
+    public Productos buscarProducto(String codigo) {
         for (int i = 0; i < totalProductos; i++) {
             if (productos[i].getCodigo().equals(codigo)) {
                 return productos[i];
@@ -129,7 +129,7 @@ public class Inventario {
     }
 
     // Getters  para estadisticas
-    public Producto[] getProductos() {
+    public Productos[] getProductos() {
         return productos;
     }
 
